@@ -1,0 +1,13 @@
+node_modules/
+.env
+.env.*
+!.env.example
+npm-debug.log*
+.DS_Store
+Thumbs.db
+coverage/
+/images/
+video/
+.vscode/
+.idea/
+*.log

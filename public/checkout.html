@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Finalize seu pedido na Trezê." />
+    <title>Finalizar pedido | Trezê</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script type="module" src="/assets/js/site.js"></script>
+    <script type="module" src="/assets/js/checkout.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/"
+          ><span class="brand__mark" aria-hidden="true">T</span
+          ><span>Trezê</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          Menu
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-nav"
+          data-navigation
+          aria-label="Navegação principal"
+        >
+          <a href="/">Loja</a><a href="/#colecao">Coleção</a
+          ><a href="/pedidos.html">Pedidos</a><a href="/como-fiz">Como fiz</a>
+        </nav>
+        <div class="header-actions">
+          <a
+            class="header-action header-action--cart"
+            href="/carrinho.html"
+            aria-label="Carrinho de compras"
+            >↗<span class="cart-count" data-cart-count hidden>0</span></a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="conteudo" class="container checkout-page">
+      <a class="back-link" href="/carrinho.html">← Voltar para o carrinho</a>
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Última etapa</span>
+          <h1>Finalizar pedido</h1>
+        </div>
+        <span class="eyebrow">Trezê / Pedido</span>
+      </div>
+
+      <p class="checkout-feedback" data-checkout-status role="alert" hidden></p>
+
+      <div class="checkout-layout" data-checkout-content>
+        <section class="checkout-form-panel">
+          <span class="eyebrow">Seus dados</span>
+          <h2>Para onde enviamos a confirmação?</h2>
+          <form class="checkout-form" data-checkout-form>
+            <div class="checkout-fields">
+              <label class="checkout-field checkout-field--wide">
+                Nome completo
+                <input
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  minlength="3"
+                  maxlength="100"
+                  required
+                />
+              </label>
+              <label class="checkout-field">
+                E-mail
+                <input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="160"
+                  required
+                />
+              </label>
+              <label class="checkout-field">
+                Telefone
+                <input
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  maxlength="20"
+                  required
+                />
+              </label>
+              <label class="checkout-field checkout-field--wide">
+                Observação <span>(opcional)</span>
+                <textarea
+                  name="note"
+                  rows="4"
+                  maxlength="500"
+                  placeholder="Alguma preferência ou detalhe sobre o pedido?"
+                ></textarea>
+              </label>
+            </div>
+            <div class="checkout-payment-note">
+              <span class="eyebrow">Entrega e pagamento</span>
+              <p>
+                A Trezê confirma os detalhes com você depois do pedido. A
+                entrega e o pagamento são combinados diretamente, sem informar
+                dados de cartão nesta etapa.
+              </p>
+            </div>
+            <button class="button button--primary button--wide" type="submit">
+              Confirmar pedido <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+        </section>
+
+        <aside class="checkout-order-summary">
+          <span class="eyebrow">Seu pedido</span>
+          <div class="checkout-items" data-checkout-items></div>
+          <div class="summary-line">
+            <span>Subtotal</span><strong data-checkout-total>R$ 0,00</strong>
+          </div>
+          <div class="summary-line">
+            <span>Entrega</span><span>A combinar</span>
+          </div>
+          <div class="summary-total">
+            <span>Total</span><strong data-checkout-total>R$ 0,00</strong>
+          </div>
+        </aside>
+      </div>
+
+      <section
+        class="checkout-success"
+        data-checkout-success
+        tabindex="-1"
+        hidden
+      >
+        <span class="empty-state__icon">✓</span>
+        <span class="eyebrow">Pedido recebido</span>
+        <h2>Obrigado por escolher a Trezê.</h2>
+        <p>
+          Seu pedido <strong data-order-id></strong> foi registrado. Vamos
+          combinar os detalhes de entrega e pagamento com você.
+        </p>
+        <div class="checkout-success__actions">
+          <a class="button button--dark" data-order-link href="/pedido.html"
+            >Ver detalhes do pedido <span aria-hidden="true">↗</span></a
+          >
+          <a class="product-detail__continue" href="/#colecao"
+            >Continuar comprando <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+
+      <section class="checkout-empty" data-checkout-empty hidden>
+        <span class="empty-state__icon">○</span>
+        <h2>Seu carrinho está vazio.</h2>
+        <p>Escolha uma peça antes de finalizar o pedido.</p>
+        <a class="button button--dark" href="/#colecao"
+          >Explorar coleção <span aria-hidden="true">↘</span></a
+        >
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="brand brand--footer" href="/"
+            ><span class="brand__mark" aria-hidden="true">T</span
+            ><span>Trezê</span></a
+          >
+          <p>Objetos que ganham forma.</p>
+          <a class="footer-cta" href="/#colecao"
+            >Explorar coleção <span aria-hidden="true">↘</span></a
+          >
+        </div>
+        <nav aria-label="Navegação no rodapé">
+          <span class="eyebrow eyebrow--light">Navegue</span>
+          <a href="/">Loja</a>
+          <a href="/#colecao">Coleção</a>
+          <a href="/pedidos.html">Meus pedidos</a>
+          <a href="/carrinho.html">Carrinho</a>
+          <a href="/como-fiz">Como fiz</a>
+        </nav>
+        <div>
+          <span class="eyebrow eyebrow--light">Conecte-se</span>
+          <a
+            href="https://github.com/colavitepedro/treze-store"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub ↗</a
+          >
+          <a
+            href="https://www.linkedin.com/in/pedro-colavite-conilho/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn ↗</a
+          >
+          <a
+            href="https://www.instagram.com/colavite.pedro/"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram ↗</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Trezê</span
+        ><span>Feito em pequena escala, com intenção.</span>
+      </div>
+    </footer>
+  </body>
+</html>

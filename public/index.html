@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Trezê — objetos autorais impressos em 3D para deixar seu espaço mais seu."
+    />
+    <title>Trezê — Objetos que ganham forma</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="preload" as="image" href="/assets/images/castical-orbita.svg" />
+    <script type="module" src="/assets/js/site.js"></script>
+    <script type="module" src="/assets/js/home.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/"
+          ><span class="brand__mark" aria-hidden="true">T</span
+          ><span>Trezê</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          Menu
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-nav"
+          data-navigation
+          aria-label="Navegação principal"
+        >
+          <a class="is-active" href="/">Loja</a>
+          <a href="#colecao">Coleção</a>
+          <a href="/pedidos.html">Pedidos</a>
+          <a href="/como-fiz">Como fiz</a>
+        </nav>
+        <div class="header-actions">
+          <a class="header-action" href="#colecao" aria-label="Buscar produtos"
+            >⌕</a
+          >
+          <a
+            class="header-action header-action--cart"
+            href="/carrinho.html"
+            aria-label="Carrinho de compras"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3 4.5h2l1.9 8.7a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 1.9-1.5L20 7H6"
+              />
+              <path d="M8 10h10M8.7 13h9" />
+              <circle cx="10" cy="19.5" r="1.2" />
+              <circle cx="17" cy="19.5" r="1.2" /></svg
+            ><span class="cart-count" data-cart-count hidden>0</span></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero container">
+        <div class="hero__copy">
+          <span class="eyebrow eyebrow--light">Objetos para morar melhor</span>
+          <h1>O que você imagina, a gente dá forma!</h1>
+          <p>
+            Peças autorais impressas em 3D, feitas para ocupar espaços com
+            personalidade.
+          </p>
+          <a class="button button--light" href="#colecao"
+            >Explorar coleção <span aria-hidden="true">↘</span></a
+          >
+        </div>
+        <div class="hero__art">
+          <img
+            src="/assets/images/castical-orbita.svg"
+            alt="Castiçal Órbita, peça em destaque da Trezê"
+            width="640"
+            height="640"
+            fetchpriority="high"
+          />
+        </div>
+      </section>
+
+      <section class="intro container" aria-labelledby="intro-title">
+        <div>
+          <span class="eyebrow">Trezê / 01</span>
+          <h2 id="intro-title">
+            Pequenas peças.<br /><em>Grande presença.</em>
+          </h2>
+        </div>
+        <p>
+          Do primeiro rascunho à última camada, criamos objetos que equilibram
+          função, textura e um pouco de estranhamento bom.
+        </p>
+      </section>
+
+      <section
+        class="collection container"
+        id="colecao"
+        aria-labelledby="collection-title"
+      >
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Coleção atual</span>
+            <h2 id="collection-title">Escolha seu próximo objeto</h2>
+          </div>
+          <span class="result-count" data-result-count
+            >Carregando peças...</span
+          >
+        </div>
+        <div class="catalog-toolbar" role="search">
+          <label class="field field--search"
+            ><span class="sr-only">Buscar produto</span
+            ><span aria-hidden="true">⌕</span
+            ><input
+              type="search"
+              data-search
+              placeholder="Buscar por nome ou categoria"
+          /></label>
+          <label class="field"
+            ><span class="sr-only">Filtrar por categoria</span
+            ><select data-category>
+              <option value="">Todas as categorias</option>
+            </select></label
+          >
+          <button class="text-button" type="button" data-clear-filters>
+            Limpar filtros
+          </button>
+        </div>
+        <div class="loading-grid" data-loading aria-label="Carregando catálogo">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="product-grid" data-product-grid></div>
+        <p class="catalog-status" data-catalog-status hidden role="status"></p>
+      </section>
+
+      <section class="manifesto container">
+        <div class="manifesto__number">02</div>
+        <div>
+          <span class="eyebrow">Feito diferente</span>
+          <h2>Não é só plástico.<br />É intenção.</h2>
+          <p>
+            Cada peça nasce para resolver uma pequena necessidade e deixar uma
+            marca grande no cotidiano.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="brand brand--footer" href="/"
+            ><span class="brand__mark" aria-hidden="true">T</span
+            ><span>Trezê</span></a
+          >
+          <p>Objetos que ganham forma.</p>
+          <a class="footer-cta" href="/#colecao"
+            >Explorar coleção <span aria-hidden="true">↘</span></a
+          >
+        </div>
+        <nav aria-label="Navegação no rodapé">
+          <span class="eyebrow eyebrow--light">Navegue</span>
+          <a href="/">Loja</a>
+          <a href="/#colecao">Coleção</a>
+          <a href="/pedidos.html">Meus pedidos</a>
+          <a href="/carrinho.html">Carrinho</a>
+          <a href="/como-fiz">Como fiz</a>
+        </nav>
+        <div>
+          <span class="eyebrow eyebrow--light">Conecte-se</span>
+          <a
+            href="https://github.com/colavitepedro/treze-store"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub ↗</a
+          >
+          <a
+            href="https://www.linkedin.com/in/pedro-colavite-conilho/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn ↗</a
+          >
+          <a
+            href="https://www.instagram.com/colavite.pedro/"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram ↗</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Trezê</span
+        ><span>Feito em pequena escala, com intenção.</span>
+      </div>
+    </footer>
+  </body>
+</html>

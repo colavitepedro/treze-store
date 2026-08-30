@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Seu carrinho na Trezê." />
+    <title>Carrinho | Trezê</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script type="module" src="/assets/js/site.js"></script>
+    <script type="module" src="/assets/js/cart-page.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/"
+          ><span class="brand__mark" aria-hidden="true">T</span
+          ><span>Trezê</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          Menu
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-nav"
+          data-navigation
+          aria-label="Navegação principal"
+        >
+          <a href="/">Loja</a><a href="/#colecao">Coleção</a
+          ><a href="/pedidos.html">Pedidos</a><a href="/como-fiz">Como fiz</a>
+        </nav>
+        <div class="header-actions">
+          <a class="header-action" href="/" aria-label="Voltar para a loja"
+            >←</a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="conteudo" class="container cart-page">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Seu pedido</span>
+          <h1>Carrinho</h1>
+        </div>
+        <span class="eyebrow" data-cart-item-count>0 itens</span>
+      </div>
+      <p class="cart-feedback" data-cart-feedback role="status" hidden></p>
+      <div class="cart-layout">
+        <section>
+          <a class="back-link cart-continue" href="/#colecao"
+            >← Continuar comprando</a
+          >
+          <div class="cart-list" data-cart-list></div>
+          <div class="empty-state" data-cart-empty hidden>
+            <span class="empty-state__icon">○</span>
+            <h2>Seu carrinho está leve.</h2>
+            <p>
+              Nenhuma peça pediu carona ainda. Escolha uma para começar sua
+              coleção.
+            </p>
+            <a class="button button--dark" href="/#colecao">Explorar coleção</a>
+          </div>
+        </section>
+        <aside class="cart-summary" data-cart-summary hidden>
+          <span class="eyebrow">Resumo do pedido</span>
+          <div class="summary-line">
+            <span>Subtotal</span><strong data-cart-total>R$ 0,00</strong>
+          </div>
+          <div class="summary-line">
+            <span>Entrega</span><span>Combinada depois da compra</span>
+          </div>
+          <div class="summary-total">
+            <span>Total</span><strong data-cart-total>R$ 0,00</strong>
+          </div>
+          <p class="cart-summary__note">
+            O carrinho fica salvo nesta sessão. A entrega é combinada depois da
+            compra.
+          </p>
+          <a class="button button--primary button--wide" href="/checkout.html">
+            Finalizar pedido <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="brand brand--footer" href="/"
+            ><span class="brand__mark" aria-hidden="true">T</span
+            ><span>Trezê</span></a
+          >
+          <p>Objetos que ganham forma.</p>
+          <a class="footer-cta" href="/#colecao"
+            >Explorar coleção <span aria-hidden="true">↘</span></a
+          >
+        </div>
+        <nav aria-label="Navegação no rodapé">
+          <span class="eyebrow eyebrow--light">Navegue</span>
+          <a href="/">Loja</a>
+          <a href="/#colecao">Coleção</a>
+          <a href="/pedidos.html">Meus pedidos</a>
+          <a href="/carrinho.html">Carrinho</a>
+          <a href="/como-fiz">Como fiz</a>
+        </nav>
+        <div>
+          <span class="eyebrow eyebrow--light">Conecte-se</span>
+          <a
+            href="https://github.com/colavitepedro/treze-store"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub ↗</a
+          >
+          <a
+            href="https://www.linkedin.com/in/pedro-colavite-conilho/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn ↗</a
+          >
+          <a
+            href="https://www.instagram.com/colavite.pedro/"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram ↗</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Trezê</span
+        ><span>Feito em pequena escala, com intenção.</span>
+      </div>
+    </footer>
+  </body>
+</html>

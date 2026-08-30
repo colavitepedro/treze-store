@@ -1,0 +1,12 @@
+.git
+.github
+node_modules
+video/
+coverage
+.env
+.env.*
+!.env.example
+npm-debug.log*
+*.log
+.DS_Store
+Thumbs.db

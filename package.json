@@ -1,0 +1,27 @@
+{
+  "name": "treze-store",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Trezê — e-commerce de produtos impressos em 3D.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "compression": "^1.7.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6"
+  }
+}

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Detalhes do seu pedido na Trezê." />
+    <title>Meu pedido | Trezê</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script type="module" src="/assets/js/site.js"></script>
+    <script type="module" src="/assets/js/order.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="/"
+          ><span class="brand__mark" aria-hidden="true">T</span
+          ><span>Trezê</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-navigation"
+        >
+          Menu
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-nav"
+          data-navigation
+          aria-label="Navegação principal"
+        >
+          <a href="/">Loja</a><a href="/#colecao">Coleção</a
+          ><a href="/pedidos.html">Pedidos</a><a href="/como-fiz">Como fiz</a>
+        </nav>
+        <div class="header-actions">
+          <a
+            class="header-action header-action--cart"
+            href="/carrinho.html"
+            aria-label="Carrinho de compras"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M3 4.5h2l1.9 8.7a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 1.9-1.5L20 7H6"
+              />
+              <path d="M8 10h10M8.7 13h9" />
+              <circle cx="10" cy="19.5" r="1.2" />
+              <circle cx="17" cy="19.5" r="1.2" /></svg
+            ><span class="cart-count" data-cart-count hidden>0</span></a
+          >
+        </div>
+      </div>
+    </header>
+    <main id="conteudo" class="container order-page" data-order-page>
+      <a class="back-link" href="/pedidos.html">← Voltar para meus pedidos</a>
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Acompanhe seu pedido</span>
+          <h1 data-order-title>Meu pedido</h1>
+        </div>
+        <span class="order-status" data-order-status>Carregando</span>
+      </div>
+      <p class="checkout-feedback" data-order-feedback role="alert" hidden></p>
+
+      <div class="order-layout" data-order-content hidden>
+        <section class="order-details-panel">
+          <div class="order-section-heading">
+            <span class="eyebrow">Itens do pedido</span>
+            <span class="eyebrow" data-order-item-count></span>
+          </div>
+          <div class="order-items" data-order-items></div>
+          <div class="order-customer">
+            <span class="eyebrow">Confirmação enviada para</span>
+            <strong data-order-customer></strong>
+            <span data-order-email></span>
+          </div>
+        </section>
+
+        <aside class="order-summary">
+          <div class="order-id">
+            <span class="eyebrow eyebrow--light">ID do pedido</span>
+            <a
+              class="order-id__value"
+              data-order-id
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+              >—</a
+            >
+          </div>
+          <span class="eyebrow eyebrow--light">Resumo</span>
+          <div class="summary-line">
+            <span>Subtotal</span><strong data-order-total>R$ 0,00</strong>
+          </div>
+          <div class="summary-line">
+            <span>Entrega</span><span data-order-delivery>A combinar</span>
+          </div>
+          <div class="summary-total">
+            <span>Total</span><strong data-order-total>R$ 0,00</strong>
+          </div>
+          <p class="cart-summary__note">
+            O pedido foi recebido. A Trezê combina os detalhes com você.
+          </p>
+        </aside>
+      </div>
+
+      <section class="order-empty" data-order-empty hidden>
+        <span class="empty-state__icon">?</span>
+        <h2>Não encontramos esse pedido.</h2>
+        <p>Confira o link ou volte para a loja para escolher uma peça.</p>
+        <a class="button button--dark" href="/#colecao"
+          >Explorar coleção <span aria-hidden="true">↘</span></a
+        >
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__grid">
+        <div>
+          <a class="brand brand--footer" href="/"
+            ><span class="brand__mark" aria-hidden="true">T</span
+            ><span>Trezê</span></a
+          >
+          <p>Objetos que ganham forma.</p>
+          <a class="footer-cta" href="/#colecao"
+            >Explorar coleção <span aria-hidden="true">↘</span></a
+          >
+        </div>
+        <nav aria-label="Navegação no rodapé">
+          <span class="eyebrow eyebrow--light">Navegue</span>
+          <a href="/">Loja</a>
+          <a href="/#colecao">Coleção</a>
+          <a href="/pedidos.html">Meus pedidos</a>
+          <a href="/carrinho.html">Carrinho</a>
+          <a href="/como-fiz">Como fiz</a>
+        </nav>
+        <div>
+          <span class="eyebrow eyebrow--light">Conecte-se</span>
+          <a
+            href="https://github.com/colavitepedro/treze-store"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub ↗</a
+          >
+          <a
+            href="https://www.linkedin.com/in/pedro-colavite-conilho/"
+            target="_blank"
+            rel="noreferrer"
+            >LinkedIn ↗</a
+          >
+          <a
+            href="https://www.instagram.com/colavite.pedro/"
+            target="_blank"
+            rel="noreferrer"
+            >Instagram ↗</a
+          >
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Trezê</span
+        ><span>Feito em pequena escala, com intenção.</span>
+      </div>
+    </footer>
+  </body>
+</html>

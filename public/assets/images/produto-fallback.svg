@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">Produto Trezê</title>
+  <desc id="desc">Imagem provisória de um produto Trezê</desc>
+  <rect width="480" height="480" rx="24" fill="#e5e4de" />
+  <circle cx="240" cy="220" r="112" fill="#ff6b1a" opacity="0.9" />
+  <path
+    d="M175 280c0-55 22-90 65-110 43 20 65 55 65 110 0 20-16 36-36 36h-58c-20 0-36-16-36-36Z"
+    fill="#fff1d7"
+  />
+  <path
+    d="M240 170v120M205 230h70"
+    stroke="#1d282b"
+    stroke-width="12"
+    stroke-linecap="round"
+  />
+  <ellipse cx="240" cy="350" rx="118" ry="18" fill="#1d282b" opacity="0.18" />
+</svg>

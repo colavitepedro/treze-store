@@ -1,0 +1,30 @@
+services:
+  treze:
+    image: ${IMAGE_NAME:-ghcr.io/colavitepedro/treze-store}:${IMAGE_TAG:-latest}
+    container_name: treze-store
+    restart: unless-stopped
+    volumes:
+      - treze_data:/data
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      HTTPS_ENABLED: ${HTTPS_ENABLED:-false}
+      DATA_DIR: /data
+      HOST: 0.0.0.0
+      PORT: 3000
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "node",
+          "-e",
+          "fetch('http://127.0.0.1:3000/api/health').then(r => { if (!r.ok) process.exit(1) }).catch(() => process.exit(1))",
+        ]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+
+volumes:
+  treze_data:
